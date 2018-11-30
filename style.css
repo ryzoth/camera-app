@@ -18,7 +18,7 @@ html, body{
     filter: FlipH;
 }
 
-/*this centres the button on the bottom of the screen*/
+/*this centres the shutter button on the bottom of the screen*/
 #camera--trigger{
     width: 200px;
     background-color: black;
@@ -31,6 +31,22 @@ html, body{
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
     position: fixed;
     bottom: 30px;
+    left: calc(50% - 100px);
+}
+
+/*this centres the save button near the bottom of the screen*/
+#image--save{
+    width: 200px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    position: fixed;
+    bottom: 100px;
     left: calc(50% - 100px);
 }
 /*this styles the taken image*/
