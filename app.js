@@ -1,11 +1,13 @@
 // Set constraints for the video stream
-var constraints = { video: { facingMode: "user" }, audio: false };
+var constraints = { video: { facingMode: "environment" }, audio: false };  //if you set facingMode to "user", it uses the front camera.  Back camera is "environment"
+
 // Define constants
 const cameraView = document.querySelector("#camera--view"),
     cameraOutput = document.querySelector("#camera--output"),
     cameraSensor = document.querySelector("#camera--sensor"),
     cameraTrigger = document.querySelector("#camera--trigger")
-// Access the device camera and stream to cameraView
+
+	// Access the device camera and stream to cameraView
 function cameraStart() {
     navigator.mediaDevices
         .getUserMedia(constraints)
@@ -14,9 +16,10 @@ function cameraStart() {
         cameraView.srcObject = stream;
     })
     .catch(function(error) {
-        console.error("Oops. Something is broken.", error);
+        console.error("Error: Couldn't access the camera!", error);
     });
 }
+
 // Take a picture when cameraTrigger is tapped
 cameraTrigger.onclick = function() {
     cameraSensor.width = cameraView.videoWidth;

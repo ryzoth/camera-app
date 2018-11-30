@@ -1,19 +1,24 @@
+/*no unplanned spacing in the view port */
 html, body{
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
 }
+
 #camera, #camera--view, #camera--sensor, #camera--output{
     position: fixed;
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: cover; /*this makes the video output fill the whole screen*/
 }
 #camera--view, #camera--sensor, #camera--output{
-    transform: scaleX(-1);
+    /*these two lines mirror the image*/
+	transform: scaleX(-1);
     filter: FlipH;
 }
+
+/*this centres the button on the bottom of the screen*/
 #camera--trigger{
     width: 200px;
     background-color: black;
@@ -28,6 +33,7 @@ html, body{
     bottom: 30px;
     left: calc(50% - 100px);
 }
+/*this styles the taken image*/
 .taken{
     height: 100px!important;
     width: 100px!important;
