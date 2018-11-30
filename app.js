@@ -32,7 +32,7 @@ cameraTrigger.onclick = function() {
 	
 };
 
-/*var canvas = document.getElementById('canvas');
+var canvas = document.getElementById('canvas');
 
 canvas.toBlob(function(blob) {
 	var newImg = document.createElement('img'),
@@ -50,7 +50,7 @@ canvas.toBlob(function(blob) {
 saveAction.onclick = function() {
 	canvas = cameraOutput;
 	canvas.toBlob();
-};*/
+};
 
 // Start the video stream when the window loads
 window.addEventListener("load", cameraStart, false);
