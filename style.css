@@ -35,7 +35,7 @@ html, body{
 }
 
 /*this centres the save button near the bottom of the screen*/
-#image--save{
+#image--saver{
     width: 200px;
     background-color: black;
     color: white;
